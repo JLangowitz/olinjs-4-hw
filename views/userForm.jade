@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1=title
+	form(action="/users/create", method="post")
+		p Enter your username!
+			input(name="name")
+		p
+			input(type="submit", name="submit")
