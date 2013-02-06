@@ -13,15 +13,16 @@ exports.new = function(req, res){
 };
 
 exports.create = function(req, res){
-	User.find({name:req.body.name}).exec(function(err, db_user)){
-		if (db_user.length != 0){
-			var newUser = new User ({name:req.body.name});
-			newUser.save(function(err){
+	User.findOne({name:req.body.name}).exec(function(err, user){
+		if (!user){
+			var user = new User ({name:req.body.name});
+			user.save(function(err){
 				if (err){
 					return console.log("error", err)
 				}
-				res.redirect('/');
 			});
 		}
+		req.session.user = user;
+		res.redirect('/');
 	});
-});
+};

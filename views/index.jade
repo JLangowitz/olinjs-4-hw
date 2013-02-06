@@ -1,7 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Welcome to #{title}
+		p Compose a Twit
+			input(id="twit")
+		p
+			input(id="submit", type="submit", name="Send Twit")
 
-  include _twits
+	div(id="twits")
+		include _twits
+
+block js
+	script( src="/javascripts/main.js" )

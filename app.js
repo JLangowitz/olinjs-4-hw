@@ -13,7 +13,7 @@ var express = require('express')
 
 var app = express();
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/burgers');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/twitter');
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -36,8 +36,9 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/users/new',user.new);
+app.get('/index/update', routes.update);
 app.post('/users/new', user.create);
-app.post('/tweets/:user', tweets.new);
+app.post('/tweets', tweets.new);
 
 
 http.createServer(app).listen(app.get('port'), function(){
