@@ -9,7 +9,7 @@ exports.list = function(req, res){
 };
 
 exports.new = function(req, res){
-	res.render('userForm',{title:'New User'});
+	res.render('userForm',{title:'Login!'});
 };
 
 exports.create = function(req, res){

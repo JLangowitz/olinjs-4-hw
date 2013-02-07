@@ -1,8 +1,94 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #61A5CC;
 }
 
 a {
   color: #00B7FF;
+}
+
+.pageTitle {
+	margin-top:0px;
+	font-size: 36px;
+	text-align: center;
+}
+
+.userInput {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+	font-size: 24px;
+	text-align: left;
+	border: solid;
+	border-radius: 15px;
+	border-width: 5px;
+	padding: 10px;
+	background-color: #AFAF97;
+	min-width: 300px
+}
+
+.twitList {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	margin-left: 70px;
+	border: solid;
+	border-radius: 15px;
+	border-width: 5px;
+	background-color: #AFAF97;
+	min-width: 500px;
+}
+
+.login {
+	text-align: center;
+	border: solid;
+	border-radius: 15px;
+	border-width: 5px;
+	background-color: #AFAF97;
+	padding: 10px;
+	margin-left: 200px;
+	margin-right: 200px;
+	min-width: 300px;
+}
+
+.twitHeader {
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: center;
+	border-bottom: solid;
+}
+
+.button {
+	position: relative;
+	margin-left: 250px;
+	border: solid;
+	border-width: 1px;
+}
+
+.loginButton {
+	position: relative;
+	margin-left: 50px;
+	border: solid;
+	border-width: 1px;
+}
+
+.inlineButton {
+	display: inline-block;
+	position: relative;
+	margin-left: 50px;
+	vertical-align: top;
+}
+
+.twits {
+	padding-left: 10px;
+}
+
+.inputPrompt {
+	display: inline-block;
+	position: relative;
+	vertical-align: text-top;
+	max-width: 100px;
+	font-size: 24px;
+	text-align: center;
 }

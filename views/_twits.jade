@@ -1,4 +1,5 @@
-h1 List Twits
-each twit in twits
-	h3 #{twit.userName}
-	p #{twit.twit}	
+h1(class="twitHeader") Look at All These Twits!
+	p
+		each twit in twits
+			h3(class="twits") #{twit.userName}
+			p(class="twits") #{twit.twit}	

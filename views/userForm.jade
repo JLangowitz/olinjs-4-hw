@@ -1,8 +1,8 @@
 extends layout
 
 block content
-	h1=title
-	form(action="/users/new", method="post")
+	h1(class='pageTitle')=title
+	form(class='login', action="/users/new", method="post")
 		p Enter your username!
 			input(name="name")
 		p

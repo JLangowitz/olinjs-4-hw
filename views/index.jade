@@ -1,14 +1,13 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to #{title}
-		p Compose a Twit
-			input(id="twit")
-		p
-			input(id="submit", type="submit", name="Send Twit")
-
-	div(id="twits")
+	h1(class='pageTitle')= title
+	div(class='userInput')
+		if logged
+			include _newTwit
+		else
+			include _login
+	div(class='twitList', id="twits")
 		include _twits
 
 block js
